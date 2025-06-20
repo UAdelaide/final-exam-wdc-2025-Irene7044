@@ -67,6 +67,7 @@
         const message = ref('Welcome to the Dog Walking Service!');
 
         function login() {
+          error.value = '';
           let user = {
             user: username.value,
             pass: password.value
