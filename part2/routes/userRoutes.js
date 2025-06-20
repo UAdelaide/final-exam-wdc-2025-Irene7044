@@ -76,9 +76,8 @@ router.post('/logout', async (req, res) => {
 
 // Router to get all dogs owned by the owner
 router.post('/myDogs', async (req, res) => {
-  const ownerID = req.session.user;
-  console.log("Request body: ", req.body);
   try {
+    const ownerID = req.session.user_id;
     const [rows] = await db.query(`
       SELECT user_id, username, role FROM Users
       WHERE username = ? AND password_hash = ?
