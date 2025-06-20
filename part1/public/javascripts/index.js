@@ -19,5 +19,8 @@ createApp({
             this.dogImage = data.message;
         });
     }
+  },
+  mounted() {
+    this.fetch_dog_api();
   }
 }).mount('#app');
