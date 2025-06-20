@@ -159,3 +159,7 @@ section {
     background-color: lightgrey;
 
 }
+
+#login #submit_button {
+    background-color: blue;
+}
