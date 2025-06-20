@@ -88,7 +88,7 @@
 
                   // If user has unknown role, alert
                   } else {
-                      alert("Unknown role " + response.user.role);
+                     throw new Error('Failed to fetch dogs')
                   }
               } else if (this.readyState == 4 && this.status >= 400) {
                   alert("Login failed");
