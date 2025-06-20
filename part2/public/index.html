@@ -134,6 +134,7 @@
             // Else
             const dogData = await res.json();
 
+            // For all entries of dogs
             for (const dog of dogData) {
               try {
                 const img = await fetch('https://dog.ceo/api/breeds/image/random');
