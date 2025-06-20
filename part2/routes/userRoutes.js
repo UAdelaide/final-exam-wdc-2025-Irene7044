@@ -87,7 +87,7 @@ router.post('/myDogs', async (req, res) => {
       WHERE owner_id = ?`, [ownerID]);
 
     if (rows.length === 0) {
-      return res.status(401).json({ error: 'Invalid credentials' });
+      return res.status(401).json({ error: 'No dogs owned' });
     }
 
     // Save to session
