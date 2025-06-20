@@ -6,6 +6,7 @@ var mysql = require('mysql2/promise');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const { write } = require('fs');
 
 var app = express();
 
@@ -64,8 +65,8 @@ app.get('/api/walkrequests/open', async (req, res) => {
 app.get('/api/walkers/summary', async (req, res) => {
     try {
         const [dogs] = await db.execute("SELECT
-            usersRouter.username AS walker_username,
-            COUNT(DISTINCT )
+            username AS walker_username,
+            COUNT(DISTINCT wrt.rating_id) AS total_ratings
 
             "
 
