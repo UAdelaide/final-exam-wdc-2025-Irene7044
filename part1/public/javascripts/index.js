@@ -6,5 +6,7 @@ createApp({
       count: ref(0)
     };
   }
-  data
+  methods: {
+    fetch_dog_api
+  }
 }).mount('#app');
