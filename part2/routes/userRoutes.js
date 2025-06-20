@@ -105,7 +105,7 @@ router.get('/myDogs', async (req, res) => {
 // From part 1: to display list of all dogs in the database
 router.get('/dogPics', async (req, res) => {
     try {
-        const [dogs] = await db.execute('SELECT d.name, d.size, u.username AS owner_username FROM Dogs d JOIN Users u ON d.owner_id = u.user_id;');
+        const [dogs] = await db.execute('SELECT dog_id, name, size, owner_id FROM Dogs;');
         res.json(dogs);
     } catch (err) {
         res.status(500).json({ error: 'Failed to fetch dogs' });
