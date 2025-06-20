@@ -142,6 +142,11 @@
                   const imgJSON = await img.json();
                   imgURL = imgJSON.message;
                 }
+
+                for (const dog of dogData) {
+                  dog.dogImage = imgURL;
+                }
+                
               }
             }
             dogs.value = dogData;
