@@ -18,11 +18,12 @@ img {
 }
 
 button {
+  padding: 20px;
   background-color: aquamarine;
   color: white;
   border-style: dotted;
   border-color: white;
-  border-
+  border-radius: 50px;
 }
 
 strong {
