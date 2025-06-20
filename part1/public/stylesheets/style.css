@@ -40,7 +40,9 @@ button {
 }
 
 button .regenerate {
-  margin-left: 1000px;
+  position: absolute;
+  bottom
+  margin: 10;
 }
 
 strong {
