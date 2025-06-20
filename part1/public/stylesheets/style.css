@@ -1,6 +1,7 @@
 body {
   padding: 50px;
-  font-family: 14px 'Comic Sans MS', Arial, sans-serif;
+  font-size: 14px;
+  font-family: 'Comic Sans MS', Arial, sans-serif;
 }
 
 a {
