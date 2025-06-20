@@ -79,7 +79,7 @@ router.get('/myDogs', async (req, res) => {
   try {
     console.log('Session: ', req.session);
     // Get owner id from user session
-    const ownerID = req.session.user_id;
+    const ownerID = req.session.user.id;
     if (!ownerID) {
       return res.status(401).json({error: 'Not logged in' });
     }
