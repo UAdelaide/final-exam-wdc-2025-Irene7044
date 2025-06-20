@@ -10,8 +10,10 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(session({
     secret: 'key',
-    resave: false
-}))
+    resave: false,
+    saveUninitialized: false,
+    cokie: { secure: false }
+}));
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
