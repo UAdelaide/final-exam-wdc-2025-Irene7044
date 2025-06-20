@@ -82,9 +82,8 @@ router.post('/myDogs', async (req, res) => {
       return res.status(401).json({error: 'Not logged in' });
     }
 
-    const [dogsList] = await 
-    const [rows] = await db.query(`
-      SELECT user_id, username, role FROM Users
+    const [dogsList] = await db.query(`
+      SELECT dog_id, name FROM Dogs
       WHERE username = ? AND password_hash = ?
     `, [user, pass]);
 
