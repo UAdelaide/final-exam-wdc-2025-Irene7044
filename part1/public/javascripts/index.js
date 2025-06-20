@@ -7,6 +7,9 @@ createApp({
     };
   }
   methods: {
-    fetch_dog_api
+    fetch_dog_api() {
+        fetch('https://dog.ceo/dog-api/documentation/random')
+        .then(res =>)
+    }
   }
 }).mount('#app');
