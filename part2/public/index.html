@@ -112,7 +112,9 @@
             if (!res.ok) {throw new Error ('Failed to fetch dog image from api');}
             const dogImage = await res.json();
 
-            for 
+            for (const dogs of dogImage) {
+              const image = await 
+            }
           } catch (err) {
             errro.value = "Failed to load dog image";
           }
