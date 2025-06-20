@@ -13,7 +13,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.get('/api/dogs')
+app.get('/api/dogs', async (req, res) => {
+    
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
