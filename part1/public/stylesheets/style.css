@@ -41,9 +41,8 @@ button {
 
 button .regenerate {
   position: fixed;
-  bottom: 0;
-  right: 0;
-  margin: 10;
+  bottom: 10px;
+  right: 10px;
 }
 
 strong {
