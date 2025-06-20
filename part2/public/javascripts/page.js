@@ -219,6 +219,9 @@ function logout(){
     var xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4) {
+            
+        }
         if (this.readyState === 4 && this.status === 200) {
             window.location.href = "/index.html"; // redirect back to login page
         } else {
