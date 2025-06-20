@@ -2,7 +2,7 @@ body {
   padding: 50px;
   font-size: 14px;
   font-family: 'Comic Sans MS', Arial, sans-serif;
-  background-color: linear-gradient(to bottom left, blue, red);
+  background-image: linear-gradient(to bottom left, blue, red);
 }
 
 
