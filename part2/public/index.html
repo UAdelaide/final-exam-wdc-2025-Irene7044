@@ -88,7 +88,7 @@
 
                   // If user has unknown role, alert
                   } else {
-                     throw new Error('Failed to fetch dogs')
+                     throw new Error('Invalid credentials. Please try again')
                   }
               } else if (this.readyState == 4 && this.status >= 400) {
                   alert("Login failed");
