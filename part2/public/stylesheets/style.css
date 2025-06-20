@@ -155,21 +155,3 @@ section {
     display: none;
 }
 
-#login {
-    background-color: lightgrey;
-
-}
-
-#login input {
-    border-style: solid;
-    border-color: lightslategray;
-    border-radius: 10px;
-    background-color: bisque;
-}
-
-#submit_button {
-    background-color: rgb(0, 119, 255);
-    border-style: solid;
-    border-color: rgb(0, 119, 255);
-    border-radius: 10px;
-}
