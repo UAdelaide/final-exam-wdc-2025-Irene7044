@@ -93,8 +93,8 @@ router.post('/myDogs', async (req, res) => {
       return res.status(401).json({ error: 'No dogs owned' });
     }
 
+    res.json(dogsList);
 
-    res.json({ message: 'Dogs retrieved successfully', user: rows[0] });
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
   }
