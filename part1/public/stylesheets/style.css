@@ -39,7 +39,7 @@ button {
 
 }
 
-button .regenerate {
+.regenerate {
   position: fixed;
   bottom: 10px;
   right: 10px;
