@@ -6,6 +6,81 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src = "javascripts/index.js" type = "module"></script>
 </head>
+<style>
+    body {
+    padding: 50px;
+    font-size: 14px;
+    font-family: 'Comic Sans MS', Arial, sans-serif;
+    background-image: linear-gradient(to bottom left, blue, red);
+    }
+
+
+    a {
+    color: #00B7FF;
+    }
+
+    h1, h2, p {
+    text-transform: uppercase;
+    text-shadow: 5px 5px 5px greenyellow;
+    animation: blink 0.5s infinite;
+    }
+
+    @keyframes blink {
+    0%, 100% {opcacity:1;}
+    50% {opacity: 0;}
+    }
+
+    img {
+    border-style: solid;
+    border-color:coral;
+    border-width: 50px;
+    border-radius: 300px;
+    animation: popBounce 2s infinite ease-in-out;
+    }
+
+    @keyframes popBounce {
+    0% {
+        transform: scale(1) translate(0,0);
+    }
+    25% {
+        transform: scale(1.5) translate(100px,50px);
+    }
+    50% {
+        transform: scale(1) translate(200px,0);
+    }
+    75% {
+        transform: scale(1.5) translate(100px,-50px);
+    }
+    100% {
+        transform: scale(1) translate(0,0);
+    }
+    }
+
+    button {
+    margin: 100;
+    padding: 20px;
+    background-color: aquamarine;
+    color: white;
+    border-style: dotted;
+    border-color: white;
+    border-radius: 50px;
+
+    }
+
+    .regenerate {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 0px;
+    font-size: 10px;
+    color: black;
+    }
+
+    strong {
+    color: white;
+    }
+
+</style>
 
 <body>
     <div id="app">
