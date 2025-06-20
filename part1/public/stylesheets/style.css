@@ -20,7 +20,9 @@ img {
 button {
   background-color: aquamarine;
   color: white;
-  border
+  border-style: dotted;
+  border-color: white;
+  border-
 }
 
 strong {
