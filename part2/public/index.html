@@ -107,7 +107,10 @@
 
         // Fetch dog images from the api
         function fetch_dog_api() {
-            fetch('https://dog.ceo/api/breeds/image/random')
+          try {
+
+          }
+            const fetch('https://dog.ceo/api/breeds/image/random')
             .then((res) => res.json())
             .then((data) => {
                 dogImage.value = data.message;
