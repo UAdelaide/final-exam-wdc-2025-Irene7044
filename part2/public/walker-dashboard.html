@@ -85,7 +85,7 @@
 
         async function getCurrenctUser() {
           try {
-            const res = await fetch('/api/walks');
+            const res = await fetch('/api/users/me') {credentials: 'include'};
             if (!res.ok) throw new Error('Failed to load walk requests');
             walks.value = await res.json();
           } catch (err) {
