@@ -14,5 +14,5 @@ createApp({
             this.dogImage = data.message;
         });
     }
-  }
+  },
 }).mount('#app');
