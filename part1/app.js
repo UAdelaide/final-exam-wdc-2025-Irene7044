@@ -69,7 +69,7 @@ app.get('/api/walkers/summary', async (req, res) => {
             COUNT(DISTINCT wrt.rating_id) AS total_ratings,
             ROUND(AVG(wrt.rating), 2) AS average_rating,
             COUNT (DISTINCT CASE WHEN wrq.status = 'completed' THEN wrq.request_id END) AS completed_walks
-            FROM Users u LEFT JOIN WalkApplications wa ON u.user_id = wa.walker_id LEFT JOIN WalkRequests wrq ON wa.request_id = wrq.request_id
+            FROM Users u LEFT JOIN WalkApplications wa ON u.user_id = wa.walker_id LEFT JOIN WalkRequests wrq ON wa.request_id = wrq.request_id LEFT JOIN WalkRatings wrt ON u.user_id = wrt.walker_id
 
             "
 
