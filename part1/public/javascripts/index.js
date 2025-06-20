@@ -6,4 +6,5 @@ createApp({
       count: ref(0)
     };
   }
+  data
 }).mount('#app');
