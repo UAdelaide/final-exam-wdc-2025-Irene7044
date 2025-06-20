@@ -133,7 +133,12 @@
 
             // Else
             const dogData = await res.json();
-            
+
+            for (const dog of dogData) {
+              try {
+                const img = await fetch("'https://dog.ceo/api/breeds/image/random'")
+              }
+            }
             dogs.value = dogData;
 
           } catch (err) {
