@@ -188,11 +188,15 @@ function login(){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             const response = JSON.parse(this.responseText);
-            // If user is 
+            // If user is owner, redirect to owner dashboard
             if (response.user.role === 'owner') {
                 window.location.href = "/owner-dashboard.html";
+
+            // If user is walker, redirect to walker dashboard
             } else if (response.user.role === 'walker') {
-                window.location.href = '/walker-dashboard.html'
+                window.location.href = '/walker-dashboard.html';
+
+            // If user is owner, redirect to owner dashboard
             } else {
                 alert("Unknown role " + response.user.role);
             }
