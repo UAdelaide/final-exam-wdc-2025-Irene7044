@@ -164,7 +164,7 @@ section {
     border-style: solid;
     border-color: lightslategray;
     border-radius: 10px;
-    background-color: bisque;
+    background-color: bisque !important;
 }
 
 #submit_button {
