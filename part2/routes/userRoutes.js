@@ -96,7 +96,7 @@ router.post('/myDogs', async (req, res) => {
     res.json(dogsList);
 
   } catch (error) {
-    res.status(500).json({ error: 'Login failed' });
+    res.status(500).json({ error: 'Failed to fetch dogs' });
   }
 
 });
