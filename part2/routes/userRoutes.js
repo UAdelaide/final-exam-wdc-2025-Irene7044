@@ -94,7 +94,7 @@ router.post('/myDogs', async (req, res) => {
     }
 
 
-    res.json({ message: 'Login successful', user: rows[0] });
+    res.json({ message: 'Dogs retrieved successfully', user: rows[0] });
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
   }
