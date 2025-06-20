@@ -9,7 +9,10 @@ createApp({
   methods: {
     fetch_dog_api() {
         fetch('https://dog.ceo/dog-api/documentation/random')
-        .then(res =>)
+        .then(res => res.json())
+        .then(data => {
+            this.dogImage = data.message;
+        });
     }
   }
 }).mount('#app');
