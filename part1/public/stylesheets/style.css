@@ -26,7 +26,11 @@ img {
   border-color:coral;
   border-width: 50px;
   border-radius: 300px;
-  animation: popBounce 
+  animation: popBounce 5s infinite ease-in-out;
+}
+
+@keyframes popBounce {
+  0
 }
 
 button {
