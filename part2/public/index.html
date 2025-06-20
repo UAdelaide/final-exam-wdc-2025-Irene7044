@@ -103,6 +103,7 @@
         const error = ref('');
         const message = ref('Welcome to the Dog Walking Service!');
         const dogImage = ref([]);
+        const dogList = ref([]);
 
         // Fetch dog images from the api
         function fetch_dog_api() {
@@ -128,7 +129,7 @@
             }
 
             // Else
-            dogs.value = await res.json();
+            dogList.value = await res.json();
 
           } catch (err) {
             error.value = 'Failed to load dogs';
