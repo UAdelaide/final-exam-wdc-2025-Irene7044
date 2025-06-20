@@ -111,6 +111,8 @@
             const res = await fetch('https://dog.ceo/api/breeds/image/random');
             if (!res.ok) {throw new Error ('Failed to fetch dog image from api');}
             const dogImage = await res.json();
+          } catch (err) {
+            errro.value = "Failed to load dog image";
           }
         }
 
