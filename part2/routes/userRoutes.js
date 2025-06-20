@@ -67,7 +67,7 @@ router.post('/logout', async (req, res) => {
     // delete session
     req.session.destroy(err => {
       if (err) {return res.status(500).json({ error: 'Login failed' });}
-      res.clear
+      res.json({ message: 'Logout sucessful' });
     });
 
 });
