@@ -111,7 +111,8 @@
 
           }
             const res = await fetch('https://dog.ceo/api/breeds/image/random');
-            if (!res.ok) {throw new Error ('Failed to fetch dog image from api')}
+            if (!res.ok) {throw new Error ('Failed to fetch dog image from api');}
+            const dogData
             .then((res) => res.json())
             .then((data) => {
                 dogImage.value = data.message;
