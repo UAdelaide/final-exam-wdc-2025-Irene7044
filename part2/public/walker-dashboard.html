@@ -88,6 +88,7 @@
             const res = await fetch('/api/users/me', {credentials: 'include'});
             if (!res.ok) throw new Error('Failed to fetch current user');
             const user = await res.json();
+            return user;
           } catch (err) {
             error.value = err.message;
           }
