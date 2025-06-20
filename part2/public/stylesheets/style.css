@@ -156,5 +156,8 @@ section {
 }
 
 #login {
-    background-color: light;
+    background-color: lightgrey;
+
 }
+
+#login input 
