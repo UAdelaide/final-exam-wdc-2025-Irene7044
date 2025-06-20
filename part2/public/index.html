@@ -100,26 +100,6 @@
           xmlhttp.send(JSON.stringify(user));
         }
 
-        function logout(){
-          // Create AJAX Request
-          var xmlhttp = new XMLHttpRequest();
-
-          xmlhttp.onreadystatechange = function() {
-              if (this.readyState === 4) {
-                  if (this.status === 200) {
-                      window.location.href = "/index.html"; // redirect back to login page
-                  } else {
-                      alert("Logout failed");
-                  }
-              }
-          };
-
-          // Open connection to server & send the post data using a POST request
-          xmlhttp.open("POST", "/api/users/logout", true);
-          xmlhttp.send();
-
-        }
-
         return { username, password, message, login };
       }
 
