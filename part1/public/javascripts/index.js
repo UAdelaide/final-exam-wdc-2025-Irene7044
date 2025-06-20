@@ -9,9 +9,8 @@ createApp({
 
   data() {
     return {
-        
-    }
-    dogImage: ''
+        dogImage: ''
+    };
   },
 
   methods: {
