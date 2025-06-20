@@ -64,19 +64,8 @@ router.post('/login', async (req, res) => {
 
 // POST logout
 router.post('/logout', async (req, res) => {
-  const { user, pass } = req.body;
-  console.log("Request body: ", req.body);
-  try {
-    const [rows] = await db.query(`
-      SELECT user_id, username, role FROM Users
-      WHERE username = ? AND password_hash = ?
-    `, [user, pass]);
-
-    if (rows.length === 0) {
-      return res.status(401).json({ error: 'Invalid credentials' });
-    }
-
-    // Save to session
+    // delete session
+    req.session.destroy(err => )
     req.session.user = {
       id: rows[0].user_id,
       username: rows[0].username,
