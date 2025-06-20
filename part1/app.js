@@ -64,8 +64,9 @@ app.get('/api/walkrequests/open', async (req, res) => {
 app.get('/api/walkers/summary', async (req, res) => {
     try {
         const [dogs] = await db.execute("SELECT
+            usersRouter.username AS walker_username,
+            COUNT(DISTINCT )
 
-            
             "
 
 
