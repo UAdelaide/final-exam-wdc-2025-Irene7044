@@ -126,11 +126,17 @@
             // Else
             const dogData = await res.json();
 
-            const img = await fetch('https://dog.ceo/api/breeds/image/random');
+            for (const dog of dogData) {
+              try {
+                const img = await fetch('https://dog.ceo/api/breeds/image/random');
+              }
+            }
+
+
             var imgURL = '';
             if (img.ok) {
               const imgJSON = await img.json();
-              imgURL = imgJSON.message;
+              dog.dogImage = imgJSON.message;
             }
 
             for (const dog of dogData) {
