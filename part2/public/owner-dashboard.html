@@ -121,16 +121,19 @@
 
         }
 
-        // Load dogs owned bu the current logged in user
+        // Load list of dogs owned bu the current logged in user
         async function loadDogs() {
           try {
             const res = await fetch('/api/users/myDogs', {
-              credentials: 'include'
+              credentials: 'include' // send user session
             });
 
+            // If error
             if (!res.ok) {
               throw new Error('Failed to fetch dogs')
             }
+
+            // Else
             dogs.value = await res.json();
 
           } catch (err) {
