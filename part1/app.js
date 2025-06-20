@@ -71,11 +71,7 @@ app.get('/api/walkers/summary', async (req, res) => {
             COUNT (DISTINCT CASE WHEN wrq.status = 'completed' THEN wrq.request_id END) AS completed_walks
             FROM Users u LEFT JOIN WalkApplications wa ON u.user_id = wa.walker_id LEFT JOIN WalkRequests wrq ON wa.request_id = wrq.request_id LEFT JOIN WalkRatings wrt ON u.user_id = wrt.walker_id
             WHERE u.role = 'walker'
-            GROUP BY u.user_id,
-
-            "
-
-
+            GROUP BY u.user_id, u.username ORDER BY walker_username;"
         );
         res.json(dogs);
     } catch (err) {
