@@ -137,6 +137,7 @@
             for (const dog of dogData) {
               try {
                 const img = await fetch('https://dog.ceo/api/breeds/image/random');
+                var = 
                 if (img.ok) {
                   const imgJSON = await img.json();
                   dogs.dogImage = imgJSON.message;
