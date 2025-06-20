@@ -56,6 +56,10 @@
       background-color: rgb(233, 233, 233);
     }
 
+    #dog_table #image_column {
+
+    }
+    
     img {
       height: 50%;
       width: 50%;
@@ -95,7 +99,7 @@
             <td>{{ dog.name }}</td>
             <td>{{ dog.size }}</td>
             <td>{{ dog.owner_id }}</td>
-            <td><img :src = "dog.dogImage" alt = "Error: Cannot load dog photo"></td>
+            <td id = "image_column"><img :src = "dog.dogImage" alt = "Error: Cannot load dog photo"></td>
           </tr>
        </table>
     </div>
