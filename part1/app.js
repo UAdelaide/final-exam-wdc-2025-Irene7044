@@ -59,6 +59,7 @@ let db;
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
 })();
+
 app.get('/api/dogs', async (req, res) => {
     try {
         const [books] = await db.execute('SELECT * FROM books');
