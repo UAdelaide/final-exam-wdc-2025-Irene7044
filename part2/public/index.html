@@ -51,11 +51,11 @@
         <input type="password" id = "password" v-model = "password">
         <br> <br>
         <input type = "submit" value = "Log In" id = "submit_button">
+        <br>
         <div v-if = "error" class = "alert alert-danger">{{ error }}</div>
       </form>
     </div>
-    <!-- <a href="owner-dashboard.html" class="btn btn-outline-primary me-2">Owner Dashboard</a>
-    <a href="walker-dashboard.html" class="btn btn-outline-success">Walker Dashboard</a> -->
+
   </div>
 
   <script>
@@ -103,7 +103,7 @@
           xmlhttp.send(JSON.stringify(user));
         }
 
-        return { username, password, message, login };
+        return { username, password, message, login, error };
       }
 
     }).mount('#app');
