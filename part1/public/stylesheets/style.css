@@ -9,7 +9,8 @@ a {
 }
 
 img {
-  border-style: dashed;
+  border-style: solid;
   border-color: pink;
-  border-radius: 20px;
+  border-width: 100px;
+  border-radius: 100px;
 }
