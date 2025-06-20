@@ -160,6 +160,10 @@ section {
 
 }
 
+#login input {
+    border
+}
+
 #login #submit_button {
     background-color: rgb(0, 119, 255);
     border-style: solid;
