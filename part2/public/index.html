@@ -46,7 +46,7 @@
   <div id="app" class="container py-5">
     <div id = "login">
       <h1 class="mb-4 text-primary">{{ message }}</h1>
-      <form @submit>
+      <form @submit.prevent = "login">
         <p>Username</p>
         <input type="text">
         <p>Password</p>
