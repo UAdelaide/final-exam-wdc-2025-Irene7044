@@ -103,7 +103,7 @@
         const error = ref('');
         const message = ref('Welcome to the Dog Walking Service!');
         const dogImage = ref([]);
-        const dogList = ref([]);
+        const dogs = ref([]);
 
         // Fetch dog images from the api
         function fetch_dog_api() {
@@ -130,7 +130,7 @@
             }
 
             // Else
-            dogList.value = await res.json();
+            dogs.value = await res.json();
 
           } catch (err) {
             error.value = 'Failed to load dogs';
@@ -173,7 +173,7 @@
           xmlhttp.send(JSON.stringify(user));
         }
 
-        return { username, password, message, login, error, dogImage, dogList };
+        return { username, password, message, login, error, dogImage, dogs };
       }
 
     }).mount('#app');
