@@ -44,6 +44,7 @@
   <div id="app" class="container py-5">
     <div id = "login">
       <h1 class="mb-4 text-primary">{{ message }}</h1>
+      <!-- Login form -->
       <form @submit.prevent= "login">
         <p>Username</p>
         <input type="text" id = "username" v-model = "username">
@@ -52,10 +53,14 @@
         <br> <br>
         <input type = "submit" value = "Log In" id = "submit_button">
         <br> <br>
+        <!-- Error message -->
         <div v-if = "error" class = "alert alert-danger">{{ error }}</div>
       </form>
 
-      <!-- Table -->
+      <!-- Table of dogs -->
+       <table>
+          <tr
+       </table>
     </div>
 
   </div>
