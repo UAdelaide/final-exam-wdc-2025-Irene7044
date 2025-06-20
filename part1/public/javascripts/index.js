@@ -7,7 +7,10 @@ createApp({
     };
   },
 
-  data: {
+  data() {
+    return {
+        
+    }
     dogImage: ''
   },
 
