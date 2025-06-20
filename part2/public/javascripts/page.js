@@ -222,7 +222,7 @@ function logout(){
         if (this.readyState === 4 && this.status === 200) {
             window.location.href = "/index.html"; // redirect back to login page
         } else {
-            alert"
+            alert("Logout failed");
         }
     };
 
