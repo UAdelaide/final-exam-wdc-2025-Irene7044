@@ -121,7 +121,7 @@
 
         }
 
-        // Load dogs 
+        // Load dogs owned bu the current logged in user
         async function loadDogs() {
           try {
             const res = await fetch('/api/users/myDogs', {
