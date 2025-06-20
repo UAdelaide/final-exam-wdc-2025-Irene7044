@@ -103,7 +103,7 @@ router.get('/myDogs', async (req, res) => {
 });
 
 // From part 1: to display list of all dogs in the database
-router.get('/dogPics', async (req, res) => {
+router.get('/dogList', async (req, res) => {
     try {
         const [dogs] = await db.execute('SELECT dog_id, name, size, owner_id FROM Dogs;');
         res.json(dogs);
