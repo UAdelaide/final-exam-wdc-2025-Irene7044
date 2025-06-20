@@ -13,7 +13,7 @@ createApp({
 
   methods: {
     fetch_dog_api() {
-        fetch('https://dog.ceo/dog-api/documentation/random')
+        fetch('https://dog.ceo/api/breeds/image/random')
         .then((res) => res.json())
         .then((data) => {
             this.dogImage = data.message;
