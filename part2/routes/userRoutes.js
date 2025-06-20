@@ -83,10 +83,12 @@ router.post('/myDogs', async (req, res) => {
       return res.status(401).json({error: 'Not logged in' });
     }
 
+    // Query the database for list of dogs owned by the user
     const [dogsList] = await db.query(`
       SELECT dog_id, name FROM Dogs
       WHERE owner_id = ?`, [ownerID]);
 
+    // If no results, no dogs are owned
     if (rows.length === 0) {
       return res.status(401).json({ error: 'No dogs owned' });
     }
