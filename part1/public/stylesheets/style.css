@@ -6,8 +6,10 @@ body {
 }
 
 p h1 h2 {
-  b
+  border-style: dotted;
+  border-color: white;
 }
+
 a {
   color: #00B7FF;
 }
