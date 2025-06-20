@@ -26,7 +26,7 @@ img {
   border-color:coral;
   border-width: 50px;
   border-radius: 300px;
-  animation: popBounce 5s infinite ease-in-out;
+  animation: popBounce 2s infinite ease-in-out;
 }
 
 @keyframes popBounce {
@@ -40,7 +40,7 @@ img {
     transform: scale(1) translate(200px,0);
   }
   75% {
-    transform: scale(1.5) translate(100px,0);
+    transform: scale(1.5) translate(100px,-50px);
   }
   100% {
     transform: scale(1) translate(0,0);
