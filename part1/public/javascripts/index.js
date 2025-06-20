@@ -6,9 +6,11 @@ createApp({
       count: ref(0)
     };
   },
+
   data: {
     dogImage: ''
-  }
+  },
+
   methods: {
     fetch_dog_api() {
         fetch('https://dog.ceo/dog-api/documentation/random')
@@ -17,5 +19,5 @@ createApp({
             this.dogImage = data.message;
         });
     }
-  },
+  }
 }).mount('#app');
