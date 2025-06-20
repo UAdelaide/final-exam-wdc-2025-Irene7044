@@ -61,7 +61,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
 
 app.get('/api/walkers/summary', async (req, res) => {
     try {
-        const [dogs] = await db.execute('SELECT * FROM Dogs');
+        const [dogs] = await db.execute('SELECT * FROM Users WHERE role = ');
         res.json(dogs);
     } catch (err) {
         res.status(500).json({ error: 'Failed to fetch books' });
