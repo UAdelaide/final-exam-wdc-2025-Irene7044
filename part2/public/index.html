@@ -108,15 +108,10 @@
         // Fetch dog images from the api
         function fetch_dog_api() {
           try {
-
-          }
             const res = await fetch('https://dog.ceo/api/breeds/image/random');
             if (!res.ok) {throw new Error ('Failed to fetch dog image from api');}
-            const dogImage = 
-            .then((res) => res.json())
-            .then((data) => {
-                dogImage.value = data.message;
-            });
+            const dogImage = await res.json();
+          }
         }
 
         // Run function on mount
