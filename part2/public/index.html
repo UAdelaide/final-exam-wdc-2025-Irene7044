@@ -51,7 +51,7 @@
         <input type="password" id = "password" v-model = "password">
         <br> <br>
         <input type = "submit" value = "Log In" id = "submit_button">
-        <div v-if = "error" class = "alert alert-danger"></div>
+        <div v-if = "error" class = "alert alert-danger">{{ error }}</div>
       </form>
     </div>
     <!-- <a href="owner-dashboard.html" class="btn btn-outline-primary me-2">Owner Dashboard</a>
