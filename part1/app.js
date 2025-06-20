@@ -50,6 +50,24 @@ app.get('/api/dogs', async (req, res) => {
     }
 });
 
+app.get('/api/dogs', async (req, res) => {
+    try {
+        const [dogs] = await db.execute('SELECT * FROM Dogs');
+        res.json(dogs);
+    } catch (err) {
+        res.status(500).json({ error: 'Failed to fetch books' });
+    }
+});
+
+app.get('/api/dogs', async (req, res) => {
+    try {
+        const [dogs] = await db.execute('SELECT * FROM Dogs');
+        res.json(dogs);
+    } catch (err) {
+        res.status(500).json({ error: 'Failed to fetch books' });
+    }
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
