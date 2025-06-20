@@ -88,10 +88,10 @@
 
                   // If user has unknown role, alert
                   } else {
-                     throw new Error('Invalid credentials. Please try again')
+                     throw new Error('Invalid role');
                   }
               } else if (this.readyState == 4 && this.status >= 400) {
-                  alert("Login failed");
+                  throw new Error('Invalid credentials. Please try again');
               }
           };
 
