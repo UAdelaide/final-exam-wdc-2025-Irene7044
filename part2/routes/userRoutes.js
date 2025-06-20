@@ -102,7 +102,8 @@ router.get('/myDogs', async (req, res) => {
 
 });
 
-app.get('/api/dogs', async (req, res) => {
+// From part 1: to display list of all dogs in the database
+router.get('/api/dogs', async (req, res) => {
     try {
         const [dogs] = await db.execute('SELECT d.name AS dog_name, d.size, u.username AS owner_username FROM Dogs d JOIN Users u ON d.owner_id = u.user_id;');
         res.json(dogs);
