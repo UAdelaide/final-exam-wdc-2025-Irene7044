@@ -218,6 +218,15 @@ function logout(){
     // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
 
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            // Parse the JSON and update the posts array
+            posts = JSON.parse(this.responseText);
+            // Call the updatePosts function to update the page
+            updatePosts();
+        }
+    };
+
     // Open connection to server & send the post data using a POST request
     xmlhttp.open("POST", "/api/users/logout", true);
     xmlhttp.send();
