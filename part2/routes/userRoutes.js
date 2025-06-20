@@ -77,6 +77,7 @@ router.post('/logout', async (req, res) => {
 // Router to get all dogs owned by the owner
 router.post('/myDogs', async (req, res) => {
   try {
+    // Get owner id from user session
     const ownerID = req.session.user_id;
     if (!ownerID) {
       return res.status(401).json({error: 'Not logged in' });
@@ -90,12 +91,6 @@ router.post('/myDogs', async (req, res) => {
       return res.status(401).json({ error: 'No dogs owned' });
     }
 
-    // Save to session
-    req.session.user = {
-      id: rows[0].user_id,
-      username: rows[0].username,
-      role: rows[0].role
-    };
 
     res.json({ message: 'Login successful', user: rows[0] });
   } catch (error) {
