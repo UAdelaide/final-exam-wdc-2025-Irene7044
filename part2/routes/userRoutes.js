@@ -77,6 +77,7 @@ router.post('/logout', async (req, res) => {
 // Router to get all dogs owned by the owner
 router.get('/myDogs', async (req, res) => {
   try {
+    console.log('Session: ', req.session);
     // Get owner id from user session
     const ownerID = req.session.user_id;
     if (!ownerID) {
