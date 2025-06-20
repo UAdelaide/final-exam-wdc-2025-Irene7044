@@ -62,7 +62,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// POST login (dummy version)
+// POST logout
 router.post('/logout', async (req, res) => {
   const { user, pass } = req.body;
   console.log("Request body: ", req.body);
