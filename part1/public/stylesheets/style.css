@@ -12,7 +12,8 @@ a {
 
 h1, h2, p {
   text-transform: uppercase;
-  text
+  text-shadow: 5px 5px 5px greenyellow;
+  animation: blink 
 }
 
 img {
