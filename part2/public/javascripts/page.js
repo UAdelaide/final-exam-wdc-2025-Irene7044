@@ -196,7 +196,7 @@ function login(){
             } else if (response.user.role === 'walker') {
                 window.location.href = '/walker-dashboard.html';
 
-            // If user is owner, redirect to owner dashboard
+            // If user has unknown role, alert
             } else {
                 alert("Unknown role " + response.user.role);
             }
