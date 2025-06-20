@@ -110,7 +110,8 @@
           try {
 
           }
-            const fetch('https://dog.ceo/api/breeds/image/random')
+            const res = await fetch('https://dog.ceo/api/breeds/image/random');
+            if (!res.ok) 
             .then((res) => res.json())
             .then((data) => {
                 dogImage.value = data.message;
