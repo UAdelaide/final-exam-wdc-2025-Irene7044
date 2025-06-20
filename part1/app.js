@@ -17,12 +17,12 @@ let db;
 
 (async () => {
   try {
-    // Connect to MySQL without specifying a database
-    const connection = await mysql.createConnection({
-      host: 'localhost',
-      user: 'root',
-      password: ''
-    });
+    // // Connect to MySQL without specifying a database
+    // const connection = await mysql.createConnection({
+    //   host: 'localhost',
+    //   user: 'root',
+    //   password: ''
+    // });
 
     // // Create the database if it doesn't exist
     // await connection.query('CREATE DATABASE IF NOT EXISTS dogwalks');
