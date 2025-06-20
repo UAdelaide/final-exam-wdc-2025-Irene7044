@@ -68,22 +68,12 @@
         const message = ref('Welcome to the Dog Walking Service!');
         var dogImage = ref('');
 
-
-    methods: {
-        fetch_dog_api() {
+        function fetch_dog_api() {
             fetch('https://dog.ceo/api/breeds/image/random')
             .then((res) => res.json())
             .then((data) => {
                 this.dogImage = data.message;
             });
-        }
-    },
-    mounted() {
-        this.fetch_dog_api();
-    }
-
-        function fetch_dog_api() {
-            
         }
 
         function login() {
@@ -122,7 +112,7 @@
           xmlhttp.send(JSON.stringify(user));
         }
 
-        return { username, password, message, login, error };
+        return { username, password, message, login, error,  };
       }
 
     }).mount('#app');
