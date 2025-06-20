@@ -30,7 +30,21 @@ img {
 }
 
 @keyframes popBounce {
-  0
+  0% {
+    transform: scale(1) translate(0,0);
+  }
+    0% {
+    transform: scale(1) translate(0,0);
+  }
+    0% {
+    transform: scale(1) translate(0,0);
+  }
+    0% {
+    transform: scale(1) translate(0,0);
+  }
+    0% {
+    transform: scale(1) translate(0,0);
+  }
 }
 
 button {
