@@ -134,13 +134,16 @@
             // Else
             const dogData = await res.json();
 
-            // For all entries of dogs
+            // For all entries of dogs, fetch a dog image from the api
             for (const dog of dogData) {
               try {
                 const img = await fetch('https://dog.ceo/api/breeds/image/random');
+
+                // Store image if response is okay
                 if (img.ok) {
                   const imgJSON = await img.json();
                   dog.dogImage = imgJSON.message;
+                  
                 } else {
                   dog.dogImage = '';
                 }
