@@ -13,7 +13,7 @@ a {
 h1, h2, p {
   text-transform: uppercase;
   text-shadow: 5px 5px 5px greenyellow;
-  animation: blink 0.7s infinite;
+  animation: blink 0.5s infinite;
 }
 
 @keyframes blink {
