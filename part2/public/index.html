@@ -143,7 +143,7 @@
                 if (img.ok) {
                   const imgJSON = await img.json();
                   dog.dogImage = imgJSON.message;
-                  
+
                 } else {
                   dog.dogImage = '';
                 }
@@ -151,7 +151,7 @@
                 dog.dogImage = '';
               }
             }
-
+            
             dogs.value = dogData;
 
           } catch (err) {
