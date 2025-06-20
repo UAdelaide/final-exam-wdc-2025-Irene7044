@@ -162,7 +162,8 @@ section {
 
 #login input {
     border-style: solid;
-    border-color: lightgr;
+    border-color: lightslategray;
+    border-radius: 10px;
 }
 
 #login #submit_button {
