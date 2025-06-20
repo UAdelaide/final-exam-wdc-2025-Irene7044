@@ -132,7 +132,9 @@
             }
 
             // Else
-            dogs.value = await res.json();
+            const dogData = await res.json();
+            
+            dogs.value = dogData;
 
           } catch (err) {
             error.value = 'Failed to load dogs';
