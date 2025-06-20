@@ -84,7 +84,7 @@ router.post('/myDogs', async (req, res) => {
 
     const [dogsList] = await db.query(`
       SELECT dog_id, name FROM Dogs
-      WHERE username = ? AND password_hash = ?
+      WHERE owner_id = ? AND password_hash = ?
     `, [user, pass]);
 
     if (rows.length === 0) {
