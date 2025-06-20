@@ -118,11 +118,9 @@
           fetch_dog_api();
         })
 
-        async function loadDogsloa() {
+        async function loadAllDogs() {
           try {
-            const res = await fetch('/api/users/myDogs', {
-              credentials: 'include' // send user session
-            });
+            const res = await fetch('/api/users/dogs');
 
             // If error
             if (!res.ok) {
