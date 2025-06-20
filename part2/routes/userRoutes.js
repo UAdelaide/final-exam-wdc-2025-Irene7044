@@ -75,7 +75,7 @@ router.post('/logout', async (req, res) => {
 });
 
 // Router to get all dogs owned by the owner
-router.post('/myDogs', async (req, res) => {
+router.get('/myDogs', async (req, res) => {
   try {
     // Get owner id from user session
     const ownerID = req.session.user_id;
@@ -89,7 +89,7 @@ router.post('/myDogs', async (req, res) => {
       WHERE owner_id = ?`, [ownerID]);
 
     // If no results, no dogs are owned
-    if (rows.length === 0) {
+    if (dogsList.length === 0) {
       return res.status(401).json({ error: 'No dogs owned' });
     }
 
