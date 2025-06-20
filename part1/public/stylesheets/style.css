@@ -29,6 +29,7 @@ img {
 }
 
 button {
+  margin: 200px;
   padding: 20px;
   background-color: aquamarine;
   color: white;
