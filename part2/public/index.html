@@ -118,6 +118,25 @@
           fetch_dog_api();
         })
 
+        async function loadDogsloa() {
+          try {
+            const res = await fetch('/api/users/myDogs', {
+              credentials: 'include' // send user session
+            });
+
+            // If error
+            if (!res.ok) {
+              throw new Error('Failed to fetch dogs')
+            }
+
+            // Else
+            dogs.value = await res.json();
+
+          } catch (err) {
+            error.value = 'Failed to load dogs';
+          }
+        }
+
         function login() {
           error.value = '';
           let user = {
