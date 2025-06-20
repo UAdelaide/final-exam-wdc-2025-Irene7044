@@ -17,7 +17,8 @@ h1, h2, p {
 }
 
 @keyframes blink {
-  0%, 100% {opcacity:1}
+  0%, 100% {opcacity:1;}
+  50% {}
 }
 
 img {
