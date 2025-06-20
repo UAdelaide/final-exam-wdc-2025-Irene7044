@@ -161,7 +161,8 @@ section {
 }
 
 #login input {
-    border
+    border-style: solid;
+    border-color: lightgr;
 }
 
 #login #submit_button {
