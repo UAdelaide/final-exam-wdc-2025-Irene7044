@@ -59,7 +59,7 @@
   </div>
 
   <script>
-    const { createApp, ref } = Vue;
+    const { createApp, ref, onMounted } = Vue;
     createApp({
       setup() {
         const username = ref('');
@@ -75,6 +75,8 @@
                 dogImage.value = data.message;
             });
         }
+
+        onMounted
 
         function login() {
           error.value = '';
