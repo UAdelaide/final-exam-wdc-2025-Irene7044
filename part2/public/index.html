@@ -76,7 +76,10 @@
             });
         }
 
-        onMounted
+        // 
+        onMounted(() => {
+          fetch_dog_api();
+        })
 
         function login() {
           error.value = '';
