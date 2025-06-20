@@ -84,8 +84,7 @@ router.post('/myDogs', async (req, res) => {
 
     const [dogsList] = await db.query(`
       SELECT dog_id, name FROM Dogs
-      WHERE owner_id = ? AND password_hash = ?
-    `, [user, pass]);
+      WHERE owner_id = ?`, [ownerID]);
 
     if (rows.length === 0) {
       return res.status(401).json({ error: 'Invalid credentials' });
