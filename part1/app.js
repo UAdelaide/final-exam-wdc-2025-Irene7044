@@ -24,16 +24,16 @@ let db;
       password: ''
     });
 
-    // Create the database if it doesn't exist
-    await connection.query('CREATE DATABASE IF NOT EXISTS DogWalkService');
-    await connection.end();
+    // // Create the database if it doesn't exist
+    // await connection.query('CREATE DATABASE IF NOT EXISTS dogwalks');
+    // await connection.end();
 
     // Now connect to the created database
     db = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
       password: '',
-      database: 'DogWalkService'
+      database: 'dogwalks'
     });
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
