@@ -220,12 +220,11 @@ function logout(){
 
     xmlhttp.onreadystatechange = function() {
         if (this.readyState === 4) {
-            
-        }
-        if (this.readyState === 4 && this.status === 200) {
-            window.location.href = "/index.html"; // redirect back to login page
-        } else {
-            alert("Logout failed");
+            if (this.status === 200) {
+                window.location.href = "/index.html"; // redirect back to login page
+            } else {
+                alert("Logout failed");
+            }
         }
     };
 
