@@ -190,8 +190,8 @@ function login(){
             alert("Welcome "+this.responseText);
             const response = JSON.parse(this.responseText);
             if (response.user.role === 'owner') {
-                window.location.href = "/owner-dashboard.html"
-            }
+                window.location.href = "/owner-dashboard.html";
+            } else if (response.user.role === 'walker')
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
         }
