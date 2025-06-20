@@ -10,6 +10,11 @@ a {
   color: #00B7FF;
 }
 
+h1, h2, p {
+  text-transform: uppercase;
+  text
+}
+
 img {
   border-style: solid;
   border-color:coral;
@@ -24,7 +29,7 @@ button {
   border-style: dotted;
   border-color: white;
   border-radius: 50px;
-  
+
 }
 
 strong {
