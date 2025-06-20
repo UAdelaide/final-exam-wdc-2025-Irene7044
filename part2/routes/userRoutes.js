@@ -74,6 +74,10 @@ router.post('/logout', async (req, res) => {
 
 });
 
-// Router to get 
+// Router to get all dogs owned by the owner
+router.post('/myDogs', async (req, res) => {
+    
+
+});
 
 module.exports = router;
