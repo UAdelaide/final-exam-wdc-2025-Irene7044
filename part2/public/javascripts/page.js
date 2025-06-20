@@ -193,6 +193,8 @@ function login(){
                 window.location.href = "/owner-dashboard.html";
             } else if (response.user.role === 'walker') {
                 window.location.href = '/walker-dashboard.html'
+            } else {
+                alert("Unknown role " + response.user.role);
             }
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
