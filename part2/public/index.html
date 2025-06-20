@@ -117,6 +117,7 @@
         // Run function on mount
         onMounted(() => {
           fetch_dog_api();
+          loadAllDogs();
         })
 
         async function loadAllDogs() {
