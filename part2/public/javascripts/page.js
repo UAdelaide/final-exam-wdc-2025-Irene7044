@@ -220,10 +220,9 @@ function logout(){
 
     xmlhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
-            // Parse the JSON and update the posts array
-            posts = JSON.parse(this.responseText);
-            // Call the updatePosts function to update the page
-            updatePosts();
+            window.location.href = "/index.html"; // redirect back to login page
+        } else {
+            alert"
         }
     };
 
