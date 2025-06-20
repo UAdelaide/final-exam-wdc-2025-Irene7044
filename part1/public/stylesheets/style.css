@@ -10,4 +10,6 @@ a {
 
 img {
   border-style: dashed;
+  border-color: pink;
+  border-radius: 20px;
 }
